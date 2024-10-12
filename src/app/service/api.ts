@@ -2,9 +2,9 @@ import type { CharacterDataWrapper } from '../types/characters'
 import type { SeriesDataWrapper } from '../types/series'
 import md5 from 'md5'
 
-const API_BASE_URL = process.env.API_BASE_URL
-const API_PUBLIC_KEY = process.env.API_PUBLIC_KEY
-const API_PRIVATE_KEY = process.env.API_PRIVATE_KEY
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL
+const API_PUBLIC_KEY = process.env.NEXT_PUBLIC_API_PUBLIC_KEY
+const API_PRIVATE_KEY = process.env.NEXT_PUBLIC_API_PRIVATE_KEY
 
 const getTimeStamp = () => Date.now().toString()
 const getHash = (timeStamp: string) =>

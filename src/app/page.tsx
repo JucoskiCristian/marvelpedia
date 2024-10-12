@@ -17,18 +17,18 @@ export default function Home() {
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
-    observer.current = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(entries => {
       const lastEntry = entries[entries.length - 1]
       if (lastEntry.isIntersecting) {
         fetchCharacters()
       }
     })
     if (lastUserRef.current) {
-      observer.current.observe(lastUserRef.current)
+      observer.observe(lastUserRef.current)
     }
     return () => {
-      if (lastUserRef.current && observer.current) {
-        observer.current.unobserve(lastUserRef.current)
+      if (lastUserRef.current) {
+        observer.unobserve(lastUserRef.current)
       }
     }
   }, [characters, hasMore])

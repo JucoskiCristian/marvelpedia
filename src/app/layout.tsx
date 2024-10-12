@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${mainFontFamily.variable} antialiased w-dvw`}>
+    <html lang="en" className={`${mainFontFamily.variable} antialiased h-dvw`}>
       <body className="bg-hero-pattern">{children}</body>
     </html>
   )
