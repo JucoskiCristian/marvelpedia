@@ -51,7 +51,7 @@ An interactive and dynamic online catalog of Marvel heroes, utilizing the offici
 
 - [x] List heroes
 - [x] Search heroes
-- [x] list heroes and series
+- [x] List heroes and series
 - [x] Edit hero name and description in client-side
 
 <!-- CONTACT -->
